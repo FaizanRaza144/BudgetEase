@@ -18,6 +18,13 @@ This README outlines the steps to install dependencies and run the BudgetEase ap
 * **Start the server:** Run the following command to start the Express.js server:
 
    ```bash
-   node app.js
+   nodemon app
 
-**3. Access the application:** Open your web browser and navigate to http://localhost:4000 to access the BudgetEase application.
+**3. Access the application:** Open your web browser and navigate to http://3.25.202.196/login.html to access the BudgetEase application.
+
+**4. Building Docker Application**
+	docker build --no-cache -t app .
+* ** To check the images** Run the following command:
+	docker images 
+* ** To Execute/Run the docker container** Run the following command:
+	docker run -d --restart unless-stopped -p 4000:4000 app
